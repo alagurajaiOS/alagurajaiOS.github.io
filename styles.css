@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.profile-text {
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.profile-text h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-text .name {
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    margin-right: 4px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.tab.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.media-grid-reels {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+
+.media-item {
+    cursor: pointer;
+}
+
+.reels img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensure the image fits within its container */
+}
+
+.youtube img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensure the image fits within its container */
+}
+
+.media-grid-article {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+
+.media-grid-article img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the image fits within its container */
+}
+
+.media-grid-article .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis; /* Add ellipsis to indicate text overflow */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+.media-grid-article .description {
+    font-size: 1em;
+    overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis; /* Add ellipsis to indicate text overflow */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+}

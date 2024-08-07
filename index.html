@@ -3,170 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Selector</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        .profile-section {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            background-color: #007bff;
-            padding: 20px;
-            border-radius: 10px;
-            color: white;
-        }
-        .profile-photo {
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            margin-right: 20px;
-        }
-        .profile-text {
-            font-size: 24px;
-            line-height: 1.4;
-        }
-        .profile-text h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .profile-text .name {
-            font-size: 30px;
-            font-weight: bold;
-        }
-        .tabs {
-            display: flex;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-        .tab {
-            flex: 1;
-            padding: 10px 20px;
-            text-align: center;
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
-            margin-right: 4px;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .tab:hover {
-            background-color: #007bff;
-            color: white;
-        }
-        .tab.active {
-            background-color: #007bff;
-            color: white;
-            border-color: #007bff;
-        }
-        .media-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 10px;
-        }
-        .media-item {
-            cursor: pointer;
-        }
-        .reels img, .youtube img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-    </style>
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="profile-section">
-            <img src="images/profile.jpeg" alt="Profile Photo" class="profile-photo">
+            <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
             <div class="profile-text">
-                <h1>Portfolio of <span class="name">Bhavani Palpandi</span></h1>
+                <h1>Portfolio of <span class="name">Bhavani</span></h1>
             </div>
         </div>
         <div class="tabs">
-            <div id="reelsTab" class="tab active" onclick="loadMedia('reels')">Reels</div>
-            <div id="youtubeTab" class="tab" onclick="loadMedia('youtube')">YouTube</div>
+            <div id="youtubeTab" class="tab active" onclick="loadMedia('youtube')">YouTube</div>
+            <div id="reelsTab" class="tab" onclick="loadMedia('reels')">Shorts</div>
             <div id="articleTab" class="tab" onclick="loadMedia('article')">Article</div>
         </div>
-        <div id="mediaGrid" class="media-grid reels"></div>
+        <div id="mediaGrid" class="media-grid"></div>
     </div>
-
-    <script>
-        const reelsData = [
-            {thumbnail: 'images/reels/1.jpg', link: 'https://www.instagram.com/reel/Ct1B48HtCCH/?igshid=MzRlODBiNWFlZA'},
-            {thumbnail: 'images/reels/2.jpg', link: 'https://www.instagram.com/reel/CnXJRh5J1bF/?igshid=MzRlODBiNWFlZA'},
-            {thumbnail: 'images/reels/3.jpg', link: 'https://www.instagram.com/reel/CljOo00tMN_/?igshid=YzdkMWQ2MWU'},
-            {thumbnail: 'images/reels/3.jpg', link: 'https://www.instagram.com/reel/CljOo00tMN_/?igshid=YzdkMWQ2MWU'},
-            {thumbnail: 'images/reels/3.jpg', link: 'https://www.instagram.com/reel/CljOo00tMN_/?igshid=YzdkMWQ2MWU'},
-            {thumbnail: 'images/reels/3.jpg', link: 'https://www.instagram.com/reel/CljOo00tMN_/?igshid=YzdkMWQ2MWU'},
-            {thumbnail: 'images/reels/3.jpg', link: 'https://www.instagram.com/reel/CljOo00tMN_/?igshid=YzdkMWQ2MWU'},
-            {thumbnail: 'images/reels/3.jpg', link: 'https://www.instagram.com/reel/CljOo00tMN_/?igshid=YzdkMWQ2MWU'},
-            {thumbnail: 'images/reels/3.jpg', link: 'https://www.instagram.com/reel/CljOo00tMN_/?igshid=YzdkMWQ2MWU'},
-            {thumbnail: 'images/reels/3.jpg', link: 'https://www.instagram.com/reel/CljOo00tMN_/?igshid=YzdkMWQ2MWU'}
-        ];
-
-        const youtubeData = [
-            {thumbnail: 'images/youtube/1.jpg', link: 'https://youtu.be/Kox8SHydqyU'},
-            {thumbnail: 'images/youtube/2.jpg', link: 'https://youtu.be/5vwGVlJbeQc'},
-            {thumbnail: 'images/youtube/2.jpg', link: 'https://youtu.be/5vwGVlJbeQc'},
-            {thumbnail: 'images/youtube/2.jpg', link: 'https://youtu.be/5vwGVlJbeQc'},
-            {thumbnail: 'images/youtube/2.jpg', link: 'https://youtu.be/5vwGVlJbeQc'},
-            {thumbnail: 'images/youtube/2.jpg', link: 'https://youtu.be/5vwGVlJbeQc'},
-            {thumbnail: 'images/youtube/2.jpg', link: 'https://youtu.be/5vwGVlJbeQc'},
-            {thumbnail: 'images/youtube/2.jpg', link: 'https://youtu.be/5vwGVlJbeQc'},
-            {thumbnail: 'images/youtube/2.jpg', link: 'https://youtu.be/5vwGVlJbeQc'},
-            {thumbnail: 'images/youtube/2.jpg', link: 'https://youtu.be/5vwGVlJbeQc'}
-        ];
-
-        const mediaGrid = document.getElementById('mediaGrid');
-        const tabs = document.querySelectorAll('.tab');
-
-        function loadMedia(mediaType) {
-            mediaGrid.innerHTML = '';
-            let data = [];
-            if (mediaType === 'reels') {
-                data = reelsData;
-                mediaGrid.classList.remove('youtube');
-                mediaGrid.classList.add('reels');
-            } else if (mediaType === 'youtube') {
-                data = youtubeData;
-                mediaGrid.classList.remove('reels');
-                mediaGrid.classList.add('youtube');
-            } else {
-                mediaGrid.innerHTML = '<p>No articles available.</p>';
-                mediaGrid.classList.remove('reels', 'youtube');
-            }
-
-            if (mediaType === 'reels' || mediaType === 'youtube') {
-                data.forEach(item => {
-                    const mediaItem = document.createElement('div');
-                    mediaItem.className = 'media-item';
-                    mediaItem.innerHTML = `<img src="${item.thumbnail}" alt="${mediaType} thumbnail">`;
-                    mediaItem.addEventListener('click', () => {
-                        window.open(item.link, '_blank');
-                    });
-                    mediaGrid.appendChild(mediaItem);
-                });
-            }
-
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.getElementById(`${mediaType}Tab`).classList.add('active');
-        }
-
-        // Load initial media type
-        loadMedia('reels');
-    </script>
+    <script src="script.js"></script>
+    
 </body>
 </html>
