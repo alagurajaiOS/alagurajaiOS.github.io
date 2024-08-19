@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,5 +24,204 @@
     </div>
     <script src="script.js"></script>
     
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alagu Raja | iOS Developer Portfolio</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f6f8;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 2s ease-in;
+        }
+        header .intro {
+            max-width: 800px;
+            margin: auto;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            animation: slideIn 1s ease-out;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in 1s;
+        }
+        header .apple-logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            opacity: 0.8;
+            animation: fadeIn 2s ease-in 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 60px;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 2s ease-in 0.5s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skills li {
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .skills li:hover {
+            background-color: #e0e0e0;
+        }
+        .contact {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Increased space between icons */
+            animation: fadeIn 2s ease-in 1s;
+        }
+        .contact-icons a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 2rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .contact-icons a:hover {
+            color: #0056b3;
+            transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .skills li {
+                width: calc(50% - 10px);
+                margin: 5px;
+            }
+        }
+        @media (max-width: 480px) {
+            .skills li {
+                width: calc(100% - 10px);
+                margin: 5px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo" class="apple-logo">
+        <div class="intro">
+            <h1>Passionate iOS Developer | Elevating User Experiences</h1>
+            <p>Hi, I'm Alagu Raja. Crafting innovative and high-quality iOS applications to enhance user engagement and satisfaction.</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="section">
+            <h2>About Me</h2>
+            <div class="card">
+                <p>Hello! I'm Alagu Raja, an experienced iOS developer with a passion for crafting seamless and engaging user experiences. With expertise in Swift and modern iOS frameworks, I build apps that are both functional and visually appealing. I am dedicated to continuous learning and staying updated with the latest technologies in the iOS ecosystem.</p>
+            </div>
+        </section>
+
+        <section class="section skills">
+            <h2>Skills</h2>
+            <div class="card">
+                <ul>
+                    <li>Swift</li>
+                    <li>UIKit</li>
+                    <li>SwiftUI</li>
+                    <li>Core Data</li>
+                    <li>RESTful APIs</li>
+                    <li>Test-Driven Development (TDD)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section contact">
+            <h2>Contact Me</h2>
+            <div class="contact card">
+                <div class="contact-icons">
+                    <a href="mailto:alaguraja.iosdev@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/alaguraja-ios/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/alagurajaiOS" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/the_2k_duker" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
